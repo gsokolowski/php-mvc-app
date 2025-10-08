@@ -63,6 +63,7 @@ class Home extends Controller
         show($b);
         show($c);
         $model = new User;
+        
 
     }
 }

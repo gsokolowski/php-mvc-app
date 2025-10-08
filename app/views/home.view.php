@@ -4,10 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
     <meta name="generator" content="Astro v5.13.2" />
     <title>Cover Template · Bootstrap v5.3</title>
     <link
@@ -197,11 +193,11 @@
             <a
               class="nav-link fw-bold py-1 px-0 active"
               aria-current="page"
-              href="#"
+              href="<?= ROOT; ?>"
               >Home</a
             >
-            <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-            <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+            <a class="nav-link fw-bold py-1 px-0" href="<?= ROOT; ?>/login">Login</a>
+            <a class="nav-link fw-bold py-1 px-0" href="<?= ROOT; ?>">Sign in</a>
           </nav>
         </div>
       </header>
