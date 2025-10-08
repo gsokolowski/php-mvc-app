@@ -1,0 +1,11 @@
+User-agent: *
+
+# Disallow 
+Disallow: /admin/
+Disallow: /ajax/
+
+# Allow everything else (especially routes exposed via index.php)
+Allow: /
+
+# Optional: Sitemap (update with real URL)
+Sitemap: https://yourdomain.com/sitemap.xml
