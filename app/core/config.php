@@ -10,7 +10,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost') {
     define('DB_PASS', '');
 
     // Root for images and other asset files based in public folder
-    define('ROOT', 'http://localhost/garbage/php-mvc/public'); 
+    define('ROOT', 'http://localhost/garbage/php-mvc-app/public'); 
 }else {
 
     // Database credentials

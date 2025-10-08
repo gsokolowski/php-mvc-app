@@ -9,15 +9,15 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Cover Template · Bootstrap v5.3</title>
+    <title>Sticky Footer Navbar Template · Bootstrap v5.3</title>
     <link
       rel="canonical"
-      href="https://getbootstrap.com/docs/5.3/examples/cover/"
+      href="https://getbootstrap.com/docs/5.3/examples/sticky-footer-navbar/"
     />
-    <script src="<?= ROOT; ?>/assets/js/color-modes.js"></script>
-    <link href="<?= ROOT; ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../assets/js/color-modes.js"></script>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
-    <link href="<?= ROOT; ?>/assets/css/cover.css" rel="stylesheet" />
+    <link href="sticky-footer-navbar.css" rel="stylesheet" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -93,7 +93,7 @@
       }
     </style>
   </head>
-  <body class="d-flex h-100 text-center text-bg-dark">
+  <body class="d-flex flex-column h-100">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path
@@ -189,45 +189,73 @@
         </li>
       </ul>
     </div>
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0">Cover</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a
-              class="nav-link fw-bold py-1 px-0 active"
-              aria-current="page"
-              href="#"
-              >Home</a
-            >
-            <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-            <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
-          </nav>
-        </div>
-      </header>
-      <main class="px-3">
-        <h1>Cover your page.</h1>
-        <p class="lead">
-          Cover is a one-page template for building simple and beautiful home
-          pages. Download, edit the text, and add your own fullscreen background
-          photo to make it your own.
-        </p>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white"
-            >Learn more</a
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Fixed navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container">
+        <h1 class="mt-5">Sticky footer with fixed navbar</h1>
+        <p class="lead">
+          Pin a footer to the bottom of the viewport in desktop browsers with
+          this custom HTML and CSS. A fixed navbar has been added with
+          <code class="small">padding-top: 60px;</code> on the
+          <code class="small">main &gt; .container</code>.
         </p>
-      </main>
-      <footer class="mt-auto text-white-50">
         <p>
-          Cover template for
-          <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>,
-          by <a href="https://x.com/mdo" class="text-white">@mdo</a>.
+          Back to
+          <a href="../examples/sticky-footer/">the default sticky footer</a>
+          minus the navbar.
         </p>
-      </footer>
-    </div>
+      </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+      <div class="container">
+        <span class="text-body-secondary"
+          >Place sticky footer content here.</span
+        >
+      </div>
+    </footer>
     <script
-      src="<?= ROOT; ?>/assets/js/bootstrap.bundle.min.js"
+      src="../assets/dist/js/bootstrap.bundle.min.js"
       class="astro-vvvwv3sm"
     ></script>
   </body>
