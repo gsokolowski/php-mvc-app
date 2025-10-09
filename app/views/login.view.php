@@ -227,6 +227,8 @@
         <button class="btn btn-primary w-100 py-2" type="submit">
           Sign in
         </button>
+        <div class="text-center"><a class="btn btn-link" href="<?= ROOT; ?>/home">Home</a></div>
+        
         <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2025</p>
       </form>
     </main>
