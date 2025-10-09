@@ -228,7 +228,7 @@
           Sign in
         </button>
         <a class="btn btn-link mt-3" href="<?= ROOT; ?>/home">Home</a>
-        <a class="btn btn-link mt-3" href="<?= ROOT; ?>/signin">Signin</a>
+        <a class="btn btn-link mt-3" href="<?= ROOT; ?>/login">Login</a>
         <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2025</p>
       </form>
     </main>
