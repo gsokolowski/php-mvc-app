@@ -3,22 +3,26 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Core\Log; //trait loaded by composer.json autoload 
 use App\Models\User;
+
 
 class Home extends Controller
 {
-    
+    use Log; //trait
+
     public function index($a = '', $b = '', $c ='') {
 
-        // echo 'Method index was called';
+        $arr[] = 'My logger is now ready  8888';
+        $this->logMe('Home',$arr); // from functions.php
+
+        echo 'Method index was called';
         
         // show($a);
         // show($b);
         // show($c);
 
         // $model = new User;
-
-        // find all from table
         // $result = $model->findAll();
         // show($result);
 
