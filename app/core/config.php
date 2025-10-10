@@ -11,6 +11,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost') {
 
     // Root for images and other asset files based in public folder
     define('ROOT', 'http://localhost/garbage/php-mvc-app/public'); 
+    define('LOG_PATH', '../logs/info.log');
 }else {
 
     // Database credentials
@@ -20,6 +21,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost') {
     define('DB_PASS', '');
 
     define('ROOT', 'https://www.yourdomain.com/public'); 
+    define('LOG_PATH', '../logs/info.log');
 }
 
 define('APP_NAME', 'My Website');
