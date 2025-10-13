@@ -13,8 +13,9 @@ class Home extends Controller
 
     public function index($a = '', $b = '', $c ='') {
 
-        $arr[] = 'My logger is now ready  8888';
-        $this->logMe('Home',$arr); // from functions.php
+        $arr[] = 'My logger is now ready  9999';
+        $arr[] = 'My logger is now ready  10000';
+        $this->logMe('Home',$arr); // from Trait Log{}
 
         echo 'Method index was called';
         
