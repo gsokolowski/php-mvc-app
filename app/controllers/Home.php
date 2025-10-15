@@ -17,8 +17,13 @@ class Home extends Controller
         $arr[] = 'My logger is now ready  10000';
         $this->logMe('Home',$arr); // from Trait Log{}
 
-        echo 'Method index was called';
+        //echo 'Method index was called';
         
+        //show($_SESSION);
+        //echo $_SESSION['user']->email;
+        // $user = $_SESSION['user'];
+        // echo $user->email;
+
         // show($a);
         // show($b);
         // show($c);

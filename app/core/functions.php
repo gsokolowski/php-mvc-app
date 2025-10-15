@@ -12,4 +12,7 @@ function escape($str) {
     return htmlspecialchars($str);
 }
 
-
+function redirect($path) {
+    header("Location: " . ROOT ."/".$path);
+    die(); //after redirection script needs to stop
+}

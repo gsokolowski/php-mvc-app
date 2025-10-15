@@ -197,12 +197,31 @@
               >Home</a
             >
             <a class="nav-link fw-bold py-1 px-0" href="<?= ROOT; ?>/login">Login</a>
-            <a class="nav-link fw-bold py-1 px-0" href="<?= ROOT; ?>">Sign in</a>
+            <?php 
+          if(!empty($_SESSION['user'])) { 
+            ?>
+            <a class="nav-link fw-bold py-1 px-0" href="<?= ROOT; ?>/logout">Logout</a>
+            <?php
+            } else {
+            ?>
+              <a class="nav-link fw-bold py-1 px-0" href="<?= ROOT; ?>/signin">Sign in</a>
+            <?php
+            } 
+          ?>
+            
           </nav>
         </div>
       </header>
       <main class="px-3">
+      <div><p> 
+        <?php 
+          if(!empty($_SESSION['user'])) { 
+            echo 'Hi '. $_SESSION['user']->email;
+            } 
+          ?>
+          </p></div>
         <h1>Cover your page.</h1>
+        
         <p class="lead">
           Cover is a one-page template for building simple and beautiful home
           pages. Download, edit the text, and add your own fullscreen background

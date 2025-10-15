@@ -18,7 +18,7 @@ trait Database {
 
         $this->connect();
         $this->stm = $this->con->prepare($sql);
-        show($this->stm);
+        //show($this->stm);
         $check = $this->stm->execute($data); // passs data for sql placeholders
         if($check) {
             $result = $this->stm->fetchAll(\PDO::FETCH_OBJ); // return all the data from the database as an object

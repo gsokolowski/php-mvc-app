@@ -186,19 +186,23 @@
       </ul>
     </div>
     <main class="form-signin w-100 m-auto text-center">
-      <form>
-        <img
-          class="mb-4"
-          src="<?= ROOT; ?>/assets/images/bootstrap-logo.svg"
-          alt=""
-          width="72"
-          height="57"
-        />
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <form method="post">
+        <?php if(!empty($errors)):?>
+        <div class="alert alert-danger">
+          <?php 
+          foreach ($errors as $error) {
+            echo $error . '</br>';
+          }
+          ?>
+        </div>
+        <?php endif; ?>
+
+        <h1 class="h3 mb-3 fw-normal">Sign in</h1>
         <div class="form-floating">
           <input
-            type="email"
-            class="form-control"
+          name="email"
+          type="email"
+          class="form-control"
             id="floatingInput"
             placeholder="name@example.com"
           />
@@ -206,6 +210,7 @@
         </div>
         <div class="form-floating">
           <input
+            name="password"
             type="password"
             class="form-control"
             id="floatingPassword"
@@ -215,13 +220,14 @@
         </div>
         <div class="form-check text-start my-3">
           <input
+            name = terms
             class="form-check-input"
             type="checkbox"
-            value="remember-me"
+            value="1"
             id="checkDefault"
           />
           <label class="form-check-label" for="checkDefault">
-            Remember me
+            Accept terns
           </label>
         </div>
         <button class="btn btn-primary w-100 py-2" type="submit">

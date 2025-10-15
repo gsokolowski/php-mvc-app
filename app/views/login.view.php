@@ -186,17 +186,20 @@
       </ul>
     </div>
     <main class="form-signin w-100 m-auto text-center">
-      <form>
-        <img
-          class="mb-4"
-          src="<?= ROOT; ?>/assets/images/bootstrap-logo.svg"
-          alt=""
-          width="72"
-          height="57"
-        />
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <form method="post">
+      <?php if(!empty($errors)):?>
+        <div class="alert alert-danger">
+          <?php 
+          foreach ($errors as $error) {
+            echo $error . '</br>';
+          }
+          ?>
+        </div>
+        <?php endif; ?>
+        <h1 class="h3 mb-3 fw-normal">Login</h1>
         <div class="form-floating">
           <input
+            name="email"
             type="email"
             class="form-control"
             id="floatingInput"
@@ -206,6 +209,7 @@
         </div>
         <div class="form-floating">
           <input
+            name="password"
             type="password"
             class="form-control"
             id="floatingPassword"
@@ -225,10 +229,10 @@
           </label>
         </div>
         <button class="btn btn-primary w-100 py-2" type="submit">
-          Sign in
+          Login
         </button>
         <a class="btn btn-link mt-3" href="<?= ROOT; ?>/home">Home</a>
-        <a class="btn btn-link mt-3" href="<?= ROOT; ?>/signin">Signin</a>
+        <a class="btn btn-link mt-3" href="<?= ROOT; ?>/signin">Sign in</a>
         <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2025</p>
       </form>
     </main>

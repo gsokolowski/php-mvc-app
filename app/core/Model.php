@@ -81,8 +81,9 @@ trait Model {
     // returns only one row
     public function first($data, $dataNot = []) {
 
+        //show($data);
         $sql = $this->buildSql($data, $dataNot);
-        show($sql);
+        //show($sql);
         $data = array_merge($data, $dataNot);
 
         $result = $this->executeQuery($sql, $data); 
