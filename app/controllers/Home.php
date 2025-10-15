@@ -19,6 +19,8 @@ class Home extends Controller
 
         //echo 'Method index was called';
         
+
+        // eee
         //show($_SESSION);
         //echo $_SESSION['user']->email;
         // $user = $_SESSION['user'];
